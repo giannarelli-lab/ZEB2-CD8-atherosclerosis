@@ -34,10 +34,8 @@ Each script contains:
 
 | Dataset | Description | Accession |
 |---------|-------------|-----------|
-| Human carotid scRNA-seq (Giannarelli et al.) | Full PBMC/plaque immune atlas (reference dataset) | [accession] |
-| Human carotid CD8 scRNA-seq (this study) | CD8 T cell subset, all donors | [accession] |
-| Human CyTOF — NKT panel | FCS files, carotid plaque specimens | [accession] |
-| Mouse PBMC CyTOF — 16 W | FCS files, *Zeb2* KO/WT mice | [accession] |
+| Human carotid scRNA-seq | Gene Exprerssion Omnibus: GSE224273,  GSE235437, GSE246318 |
+| Human and Mouse CyTOF data | FCS files | ZENODO: https://doi.org/10.5281/zenodo.20721348 |
 
 ---
 
