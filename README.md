@@ -39,10 +39,6 @@ Each script contains:
 | Human CyTOF — NKT panel | FCS files, carotid plaque specimens | [accession] |
 | Mouse PBMC CyTOF — 16 W | FCS files, *Zeb2* KO/WT mice | [accession] |
 
-Processed Seurat objects (`.rds`) and source data tables (`.xlsx`) for all quantitative panels are deposited at [repository/Zenodo link].
-
-Gene signatures used for UCell scoring are provided in `Figure_1/tables/Signatures_CD8_final.xlsx`. The REACTOME SASP gene set was downloaded from [REACTOME](https://reactome.org) (pathway R-HSA-2559582).
-
 ---
 
 ## System requirements
@@ -64,7 +60,6 @@ Gene signatures used for UCell scoring are provided in `Figure_1/tables/Signatur
 | SeuratDisk | ≥ 0.0.0.9021 | GitHub (mojaveazure) |
 | SeuratWrappers | ≥ 0.3.5 | GitHub (satijalab) |
 | UCell | ≥ 2.6 | Bioconductor |
-| Spectre | ≥ 1.1.0 | GitHub (ImmuneDynamics) |
 | slingshot | ≥ 2.10 | Bioconductor |
 | tradeSeq | ≥ 1.16 | Bioconductor |
 | TrajectoryUtils | ≥ 1.10 | Bioconductor |
@@ -79,6 +74,7 @@ Gene signatures used for UCell scoring are provided in `Figure_1/tables/Signatur
 |---------|---------------|--------|
 | CATALYST | ≥ 1.26 | Bioconductor |
 | flowCore | ≥ 2.14 | Bioconductor |
+| Spectre | ≥ 1.1.0 | GitHub (ImmuneDynamics) |
 
 #### Visualisation and utilities
 
@@ -105,67 +101,9 @@ Gene signatures used for UCell scoring are provided in `Figure_1/tables/Signatur
 | reticulate | ≥ 1.36 | CRAN |
 | scCustomize | ≥ 2.1 | CRAN |
 
-> **Tip:** To record the exact package versions used in your session, run `sessionInfo()` or `devtools::session_info()` and save the output.
-
 ### Hardware
 
-All analyses were run on a macOS system with ≥ 32 GB RAM. The tradeSeq `fitGAM` step (Figure 4) is computationally intensive and may require ≥ 64 GB RAM depending on the number of cells and genes.
-
----
-
-## Installation
-
-Install Bioconductor packages:
-
-```r
-if (!require("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-
-BiocManager::install(c(
-  "Seurat", "SingleCellExperiment", "UCell", "slingshot", "tradeSeq",
-  "TrajectoryUtils", "miloR", "scater", "Nebulosa", "CATALYST", "flowCore",
-  "ComplexHeatmap", "EnhancedVolcano"
-))
-```
-
-Install GitHub packages:
-
-```r
-if (!require("remotes", quietly = TRUE)) install.packages("remotes")
-
-remotes::install_github("mojaveazure/seurat-disk")
-remotes::install_github("satijalab/seurat-wrappers")
-remotes::install_github("ImmuneDynamics/Spectre")
-```
-
-Install CRAN packages:
-
-```r
-install.packages(c(
-  "ggplot2", "patchwork", "cowplot", "corrplot", "fmsb", "ggalluvial",
-  "pheatmap", "viridis", "RColorBrewer", "colorspace", "dplyr",
-  "data.table", "tidyr", "readxl", "openxlsx", "matrixStats",
-  "reticulate", "scCustomize"
-))
-```
-
----
-
-## Usage
-
-1. Clone this repository:
-
-```bash
-git clone https://github.com/giannarelli-lab/ZEB2-CD8-atherosclerosis.git
-```
-2. Download the processed data objects from [accession] and place them in the paths specified in each script (or update the paths at the top of each script).
-3. Open the relevant script in RStudio or run it from the command line:
-
-```bash
-Rscript Figure_1_CD8_github.R
-```
-
-Scripts are designed to be run **interactively** (e.g. in RStudio), with each section corresponding to one figure panel. Source data tables are exported to the paths specified in each script header.
+All analyses were run on a macOS system with ≥ 32 GB RAM. 
 
 ---
 
@@ -177,26 +115,12 @@ Scripts are designed to be run **interactively** (e.g. in RStudio), with each se
 
 ---
 
-## Reporting standards
-
-This study follows [Nature Portfolio reporting guidelines](https://www.nature.com/nature-portfolio/editorial-policies/reporting-standards). Source data are provided for all quantitative figure panels as `.xlsx` files (exported by each script). Statistical methods, sample sizes, and software parameters are documented in the Methods section of the manuscript and inline in the code.
-
----
-
 ## License
 
 This code is released under the **MIT License** — see [LICENSE](LICENSE) for details.
 
 ---
 
-## Citation
-
-If you use this code or data, please cite:
-
-> [Author list]. ZEB2 Directs Senescent and Cytotoxic Terminal Differentiation of CD8⁺ T Cells in Atherosclerosis. *[Journal]*, [Year]. DOI: [DOI]
-
----
-
 ## Contact
 
-For questions about the code or data, please open a [GitHub Issue](https://github.com/giannarelli-lab/ZEB2-CD8-atherosclerosis/issues) or contact [corresponding author email].
+For questions about the code or data, please open a [GitHub Issue](https://github.com/giannarelli-lab/ZEB2-CD8-atherosclerosis/issues)
