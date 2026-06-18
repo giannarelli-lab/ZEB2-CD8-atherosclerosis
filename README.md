@@ -34,8 +34,8 @@ Each script contains:
 
 | Dataset | Description | Accession |
 |---------|-------------|-----------|
-| Human carotid scRNA-seq | Gene Exprerssion Omnibus: GSE224273,  GSE235437, GSE246318 |
-| Human and Mouse CyTOF data | FCS files | ZENODO: https://doi.org/10.5281/zenodo.20721348 |
+| Human carotid scRNA-seq | Gene Exprerssion Omnibus| GSE224273,  GSE235437, GSE246318 |
+| Human and Mouse CyTOF data | ZENODO | https://doi.org/10.5281/zenodo.20721348 |
 
 ---
 
